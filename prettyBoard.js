@@ -15,17 +15,5 @@ function prettyBoard(board) {
   }
 }
 
-const boards = readAll('./puzzles.txt');
-boards.forEach((board, i) => {
-  console.log(`\nСудоку номер ${i + 1}:`.green);
-  prettyBoard(board);
-  console.log('Решение:'.blue);
-  if (solve(board)) {
-    prettyBoard(board);
-    console.log('Решено?'.red, isSolved(board));
-  } else {
-    console.log('Решение не найдено');
-  }
-});
 
 module.exports = { prettyBoard };
