@@ -22,13 +22,16 @@ const selectedBoard = boards[index];
 
 
 console.log(`\nВыбрано судоку номер ${puzzleNumber}:`.green);
-console.log('Исходная головоломка:'.red);
+console.log(`
+Исходная головоломка:`.red);
 prettyBoard(selectedBoard);
 
-console.log('Решение:'.blue);
+console.log(`
+       Решение:`.blue);
 if (solve(selectedBoard)) {
   prettyBoard(selectedBoard);
-  console.log('Решено?'.red, isSolved(selectedBoard));
+  console.log(`
+     Решено?`.red, isSolved(selectedBoard));
 } else {
   console.log('Решение не найдено');
 }
