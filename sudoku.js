@@ -1,8 +1,11 @@
-function read() {
-  /**
-   * Прочесть файл puzzles.txt в кодировке 'utf-8' и вернуть эти данные из функции
-   */
+
+const fs=require('fs')
+
+function read(path) {
+  const readFile = fs.readFileSync(path, 'utf-8')
+  return readFile;
 }
+
 
 function solve() {
   /**
