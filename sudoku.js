@@ -1,5 +1,5 @@
 
-const fs=require('fs')
+const fs = require('fs')
 
 
 function readAll(path) {
@@ -44,3 +44,6 @@ function prettyBoard() {
    * Подумай, как симпатичнее его вывести.
    */
 }
+
+
+module.exports = readAll;
