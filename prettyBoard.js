@@ -1,5 +1,3 @@
-const readAll = require('./sudoku.js');
-const { solve, isSolved } = require('./isSolve');
 
 function prettyBoard(board) {
   const sep = '------+-------+------';
@@ -13,18 +11,5 @@ function prettyBoard(board) {
     if ((i + 1) % 3 === 0 && i < 8) console.log(sep);
   }
 }
-
-const boards = readAll('./puzzles.txt');
-boards.forEach((board, i) => {
-  console.log(`\nСудоку номер ${i + 1}:`);
-  prettyBoard(board);
-  console.log('Решение:');
-  if (solve(board)) {
-    prettyBoard(board);
-    console.log('Решено?', isSolved(board));
-  } else {
-    console.log('Решение не найдено');
-  }
-});
 
 module.exports = { prettyBoard };

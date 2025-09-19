@@ -6,8 +6,10 @@ function solve(board) {
       if (board[r][c] === 0) {
         for (let n = 1; n <= 9; n++) {
           if (isValid(board, r, c, n)) {
+            // eslint-disable-next-line no-param-reassign
             board[r][c] = n;
             if (solve(board)) return true;
+            // eslint-disable-next-line no-param-reassign
             board[r][c] = 0;
           }
         }
