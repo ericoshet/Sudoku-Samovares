@@ -9,5 +9,5 @@ if (solve(board)) {
   prettyBoard(board);
   console.log('Решено?', isSolved(board));
 } else {
-  console.log('Решение не найдено');
+  console.log('Решение не найдено'); 
 }
