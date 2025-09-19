@@ -1,9 +1,17 @@
 const fs = require('fs');
 const {EOL} = require('os');
+const figlet = require('figlet');
+
+
+async function doStuff() {
+  const text = await figlet.text("Sale     reclam   89823657456");
+  console.log(text);
+}
+doStuff()
 
 
 function readAll(path) {
-  const lines = fs.readFileSync(path, 'utf-8').trim().split(EOL);  // Добавить EOL
+  const lines = fs.readFileSync(path, 'utf-8').trim().split(EOL);  
 
   return lines.map((line) => {
     const vals = [...line]
