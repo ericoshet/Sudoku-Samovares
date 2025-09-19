@@ -1,14 +1,16 @@
-const { solve, isSolved } = require('./isSolved')
-const fs = require('fs')
+const fs = require('fs');
+const {EOL} = require('os');
 
+function readAll(path) {
+  const lines = fs.readFileSync(path, 'utf-8').trim().split(EOL); // Добавить EOL
 
 function readAll(path) {
   const lines = fs.readFileSync(path, 'utf-8').trim().split('\n');  // Добавить EOL
 
-  return lines.map(line => {
+  return lines.map((line) => {
     const vals = [...line]
-      .filter(ch => /[{0-9}.\-]/.test(ch))
-      .map(ch => (ch === '-' || ch === '.' ? 0 : Number(ch)));
+      .filter((ch) => /[{0-9}.\-]/.test(ch))
+      .map((ch) => (ch === '-' || ch === '.' ? 0 : Number(ch)));
 
     if (vals.length !== 81) {
       throw new Error('Строка паззла должна содержать 81 символ (цифры и "-" / ".")');
@@ -21,29 +23,5 @@ function readAll(path) {
     return board;
   });
 }
-
-
-function solve() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции read.
-   * Возвращает игровое поле после попытки его решить.
-   */
-}
-
-function isSolved() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции solve.
-   * Возвращает булевое значение — решено это игровое поле или нет.
-   */
-}
-
-function prettyBoard() {
-  /**
-   * Принимает игровое поле в том формате, в котором его вернули из функции solve.
-   * Выводит в консоль/терминал судоку.
-   * Подумай, как симпатичнее его вывести.
-   */
-}
-
 
 module.exports = readAll;
