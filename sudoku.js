@@ -6,6 +6,7 @@ function readAll(path) {
 
   return lines.map((line) => {
     const vals = [...line]
+      // eslint-disable-next-line no-useless-escape
       .filter((ch) => /[{0-9}.\-]/.test(ch))
       .map((ch) => (ch === '-' || ch === '.' ? 0 : Number(ch)));
 
