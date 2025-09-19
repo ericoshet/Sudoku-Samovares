@@ -1,14 +1,13 @@
-const { solve, isSolved } = require('./isSolved')
-const fs = require('fs')
 
+const fs = require('fs');
 
-function readAlld(path) {
-  //const lines = fs.readFileSync(path, 'utf-8').trim().split('\n');  // Добавить EOL
+function readAll(path) {
+  const lines = fs.readFileSync(path, 'utf-8').trim().split('\n'); // Добавить EOL
 
-  return lines.map(line => {
+  return lines.map((line) => {
     const vals = [...line]
-      .filter(ch => /[{0-9}.\-]/.test(ch))
-      .map(ch => (ch === '-' || ch === '.' ? 0 : Number(ch)));
+      .filter((ch) => /[{0-9}.\-]/.test(ch))
+      .map((ch) => (ch === '-' || ch === '.' ? 0 : Number(ch)));
 
     if (vals.length !== 81) {
       throw new Error('Строка паззла должна содержать 81 символ (цифры и "-" / ".")');
@@ -21,7 +20,6 @@ function readAlld(path) {
     return board;
   });
 }
-
 
 function solve() {
   /**
@@ -44,6 +42,5 @@ function prettyBoard() {
    * Подумай, как симпатичнее его вывести.
    */
 }
-
 
 module.exports = readAll;

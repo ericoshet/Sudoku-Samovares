@@ -1,3 +1,6 @@
+// const readAll = require('./sudoku.js');
+const isValid = require('./isValid.js');
+
 
 const readAll = require('./sudoku.js');
 const isValid = require('./isValid.js');

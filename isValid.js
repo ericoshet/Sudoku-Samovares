@@ -1,3 +1,5 @@
+
+
 function isValid(board, row, col, num) {
   for (let i = 0; i < 9; i++) {
     if (i !== col && board[row][i] === num) return false;
