@@ -16,4 +16,4 @@ function isValid(board, row, col, num) {
   return true;
 }
 
-module.exports = isValid;
+module.exports = isValid

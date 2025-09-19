@@ -1,9 +1,9 @@
-
+const { solve, isSolved } = require('./isSolved')
 const fs = require('fs')
 
 
-function readAll(path) {
-  const lines = fs.readFileSync(path, 'utf-8').trim().split('\n');  // Добавить EOL
+function readAlld(path) {
+  //const lines = fs.readFileSync(path, 'utf-8').trim().split('\n');  // Добавить EOL
 
   return lines.map(line => {
     const vals = [...line]
