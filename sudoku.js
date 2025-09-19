@@ -1,11 +1,9 @@
 const fs = require('fs');
 const {EOL} = require('os');
 
-function readAll(path) {
-  const lines = fs.readFileSync(path, 'utf-8').trim().split(EOL); // Добавить EOL
 
 function readAll(path) {
-  const lines = fs.readFileSync(path, 'utf-8').trim().split('\n');  // Добавить EOL
+  const lines = fs.readFileSync(path, 'utf-8').trim().split(EOL);  // Добавить EOL
 
   return lines.map((line) => {
     const vals = [...line]
