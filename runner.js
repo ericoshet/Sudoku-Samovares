@@ -1,7 +1,6 @@
-const prettyBoard = require('./prettyBoard.js');
-const { solve, isSolved } = require('./isSolved');
-
-// const { readAll, solve, isSolved, prettyBoard } = require('./sudoku.js');
+const { prettyBoard } = require('./prettyBoard.js');
+const { solve, isSolved } = require('./isSolve.js');
+const readAll = require('./sudoku.js');
 const boards = readAll('./puzzles.txt');
 
 const board = boards[0];
