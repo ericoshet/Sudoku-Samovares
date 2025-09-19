@@ -1,5 +1,3 @@
-const readAll = require('./sudoku.js');
-const { solve, isSolved } = require('./isSolve');
 const colors = require('colors')
 
 function prettyBoard(board) {
