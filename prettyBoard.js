@@ -1,4 +1,5 @@
 const readAll = require('./sudoku.js');
+const { solve, isSolved } = require('./isSolve');
 
 function prettyBoard(board) {
   const sep = '------+-------+------';
